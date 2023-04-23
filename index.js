@@ -13,9 +13,9 @@ dotenv.config();
 
 connectDB();
 
-const allowedDomains = [process.env.FRONTEND_URL_TOKEN];
+var allowedDomains = [process.env.FRONTEND_URL_TOKEN];
 
-const corsOptions = {
+var corsOptions = {
   origin: function (origin, callback) {
     if (allowedDomains.indexOf(origin) !== -1) {
       callback(null, true);
