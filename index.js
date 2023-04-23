@@ -13,7 +13,7 @@ dotenv.config();
 
 connectDB();
 
-var allowedDomains = [process.env.FRONTEND_URL_TOKEN];
+const allowedDomains = [process.env.FRONTEND_URL_TOKEN];
 
 var corsOptions = {
   origin: function (origin, callback) {
@@ -31,8 +31,7 @@ app.use("/", usersRouter);
 
 app.use("/", operationsRouter);
 
-// const PORT = process.env.PORT || 4000;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
   console.log("Hello");
