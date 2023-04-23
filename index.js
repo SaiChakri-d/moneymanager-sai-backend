@@ -15,7 +15,7 @@ connectDB();
 
 const allowedDomains = [process.env.FRONTEND_URL_TOKEN];
 
-var corsOptions = {
+let corsOptions = {
   origin: function (origin, callback) {
     if (allowedDomains.indexOf(origin) !== -1) {
       callback(null, true);
