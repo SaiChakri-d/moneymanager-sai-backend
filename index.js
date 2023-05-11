@@ -15,7 +15,7 @@ connectDB();
 
 const allowedDomains = [process.env.FRONTEND_URL_TOKEN];
 
-let corsOptions = {
+const corsOptions = {
   origin: function (origin, callback) {
     if (allowedDomains.indexOf(origin) !== -1) {
       callback(null, true);
@@ -34,5 +34,5 @@ app.use("/", operationsRouter);
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-  console.log("Hello");
+  console.log("Hello! Welcome to Money Manager API by Sai Chakri");
 });
